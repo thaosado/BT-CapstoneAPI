@@ -1,2 +1,11 @@
-@import "/asset/sass/base/reset";
+@import "./helpers/colors";
+@import "./helpers/mixin";
+@import "./helpers/variables";
 
+@import "./base/reset";
+
+@import "./pages/home";
+@import "./pages/admin";
+@import "./pages/store";
+
+@import "./layouts/header";

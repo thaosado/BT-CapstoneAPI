@@ -1,0 +1,23 @@
+a{
+    text-decoration: none;
+}
+.container{
+    margin: 0 auto;
+    height: 100%;
+    .navbar{
+        height: 100%;
+    }
+}
+header{
+    align-items: center;
+    height: 70px;
+    background-color: $color-blue6;
+    a{
+        @include styleText($fs-3, $fw-2, $color-white);
+        margin-right: 15px;
+    }
+    a#logo{
+        font-size: $fs-5;
+    }
+    
+}

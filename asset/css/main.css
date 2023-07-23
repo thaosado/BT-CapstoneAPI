@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#home.container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.item .item__top {
+  width: 250px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px 1px black;
+}
+.item .item__top img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+#home a {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+#home a:hover {
+  text-decoration: none;
+}
+#home a:hover h1::after {
+  transform: scaleX(1);
+}
+#home a h1::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: -5px;
+  left: 25px;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+
+#home h1 {
+  position: relative;
+  color: black;
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.product h1 {
+  margin: 50px 0;
+  font-size: 28px;
+  font-weight: 500;
+  color: #2b3c4e;
+}
+
+.search {
+  position: relative;
+}
+.search i {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+}
+.search input {
+  width: 400px;
+}
+
+#btnAddProduct {
+  background-color: black;
+  border-color: black;
+  margin: 10px 0;
+}
+
+header a#store {
+  margin: 0;
+  margin-right: 70px;
+}
+
+.carousel {
+  margin: 30px 0;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.carousel .title {
+  margin-left: 200px;
+}
+.carousel .banner {
+  margin: 0 auto;
+}
+.carousel .banner img {
+  max-width: 100%;
+  height: auto;
+  width: 400px;
+}
+.carousel .container {
+  align-items: center;
+}
+
+.products {
+  margin: 30px;
+}
+.products .title {
+  background-color: #E5E7E9;
+  margin: 100px 0;
+  text-align: center;
+}
+.products .card {
+  width: 300px;
+  height: 350px;
+  padding: 15px;
+  border-radius: 15px;
+}
+.products .card__top {
+  text-align: center;
+}
+.products .card__top img {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+}
+.container .navbar {
+  height: 100%;
+}
+
+header {
+  align-items: center;
+  height: 70px;
+  background-color: #2b3c4e;
+}
+header a {
+  font-size: 22px;
+  font-weight: 400;
+  color: white;
+  margin-right: 15px;
+}
+header a#logo {
+  font-size: 28px;
+}/*# sourceMappingURL=main.css.map */
