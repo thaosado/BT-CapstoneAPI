@@ -1,5 +1,10 @@
 a{
     text-decoration: none;
+    transition: all .5s;
+    &:hover{
+        text-decoration: none;
+        color: $color-grey4;
+    }
 }
 .container{
     margin: 0 auto;
