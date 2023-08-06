@@ -1,54 +1,70 @@
-header{
-    a#store{
+header#header_bg {
+  background-color: $color-black;  
+  a#store {
     margin: 0;
-    margin-right:70px ;
+    margin-right: 150px;
+  }
 }
-
-}
-.carousel{
-    margin: 30px 0;
-    background-position: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    .title{
-        margin-left: 200px;
+.carousel {
+  margin: 30px 0;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  .title {
+    margin-left: 200px;
+  }
+  .banner {
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+      height: auto;
+      width: 400px;
     }
-    .banner{
-        margin: 0 auto;
-        img{
-            max-width: 100%;
-            height: auto;
-            width: 400px;
-            
+  }
+  .container {
+    align-items: center;
+  }
+}
+.products_bg{
+    background-color: $color-black;
+    .products {
+        transition: all .5s;
+        .title {
+          margin: 100px 0;
+          text-align: center;
+          color: $color-white;
         }
-    }
-    .container{
-        align-items: center;
-    }
-}
-
-.products{
-    .title{
-        background-color: $color-grey2;
-        margin: 100px 0;
-        text-align: center;
-        h1{
-            
+        margin: 30px;
+        .card {
+            &:hover{
+                box-shadow: -4px -4px 8px rgba(252, 215, 215, 0.2), 8px 8px 12px rgba(28,28,28,.4);
+            }
+          width: 300px;
+          height: 350px;
+          padding: 15px;
+          border-radius: 15px;
+          background-color:$color-black1;
         }
-    }
-    margin: 30px;
-    .card{
-        width: 300px;
-        height: 350px;
-        padding: 15px;
-        border-radius: 15px;
-    }
-    .card__top{
-        text-align: center;
-        img{
+        .card__top {
+          text-align: center;
+          img {
             max-width: 100%;
             height: auto;
             width: 200px;
+          }
         }
-    }
+        .card__body{
+            text-align: center;
+            padding-top: 5px;
+            color: $color-white;
+            button{
+                width: 80px;
+                background-color: $color-black;
+                color: $color-white;
+                border-radius: 10px;
+            }
+        }
+      }
 }
+
+

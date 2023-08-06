@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Merriweather", serif;
 }
 
 #home.container {
@@ -12,17 +13,17 @@
 }
 
 .item .item__top {
-  width: 250px;
-  height: 200px;
+  width: 300px;
+  height: 250px;
   display: flex;
   align-items: center;
-  border-radius: 20px;
-  box-shadow: 0px 0px 3px 1px black;
 }
 .item .item__top img {
   width: 100%;
   height: auto;
   text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px 1px black;
 }
 
 #home a {
@@ -79,9 +80,12 @@
   margin: 10px 0;
 }
 
-header a#store {
+header#header_bg {
+  background-color: black;
+}
+header#header_bg a#store {
   margin: 0;
-  margin-right: 70px;
+  margin-right: 150px;
 }
 
 .carousel {
@@ -105,27 +109,46 @@ header a#store {
   align-items: center;
 }
 
-.products {
+.products_bg {
+  background-color: black;
+}
+.products_bg .products {
+  transition: all 0.5s;
   margin: 30px;
 }
-.products .title {
-  background-color: #E5E7E9;
+.products_bg .products .title {
   margin: 100px 0;
   text-align: center;
+  color: white;
 }
-.products .card {
+.products_bg .products .card {
   width: 300px;
   height: 350px;
   padding: 15px;
   border-radius: 15px;
+  background-color: #323232;
 }
-.products .card__top {
+.products_bg .products .card:hover {
+  box-shadow: -4px -4px 8px rgba(252, 215, 215, 0.2), 8px 8px 12px rgba(28, 28, 28, 0.4);
+}
+.products_bg .products .card__top {
   text-align: center;
 }
-.products .card__top img {
+.products_bg .products .card__top img {
   max-width: 100%;
   height: auto;
   width: 200px;
+}
+.products_bg .products .card__body {
+  text-align: center;
+  padding-top: 5px;
+  color: white;
+}
+.products_bg .products .card__body button {
+  width: 80px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
 }
 
 a {
