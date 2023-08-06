@@ -1,0 +1,16 @@
+.btn-shop{
+    padding: 8px 35px;
+    font-size: 18px;
+}
+
+.btn-Add{
+    @extend .btn-shop;
+    @include button($color-white, $color-black);
+    border: solid 1px $color-grey4;
+}
+
+.btn-Moreinfo{
+    @extend .btn-shop;
+    @include button($color-grey4, $color-white);
+    border: none;
+}

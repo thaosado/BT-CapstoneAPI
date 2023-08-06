@@ -5,6 +5,23 @@
   font-family: "Merriweather", serif;
 }
 
+.btn-shop, .btn-Moreinfo, .btn-Add {
+  padding: 8px 35px;
+  font-size: 18px;
+}
+
+.btn-Add {
+  background-color: white;
+  color: black;
+  border: solid 1px #909397;
+}
+
+.btn-Moreinfo {
+  background-color: #909397;
+  color: white;
+  border: none;
+}
+
 #home.container {
   width: 100%;
   margin: 0 auto;
@@ -111,17 +128,22 @@ header#header_bg a#store {
 
 .products_bg {
   background-color: black;
+  padding-bottom: 50px;
 }
 .products_bg .products {
   transition: all 0.5s;
-  margin: 30px;
+  margin: 100px 0;
 }
 .products_bg .products .title {
-  margin: 100px 0;
+  padding-top: 80px;
   text-align: center;
   color: white;
 }
+.products_bg .products .title h1 {
+  margin: 0;
+}
 .products_bg .products .card {
+  margin: 10px 0;
   width: 300px;
   height: 350px;
   padding: 15px;

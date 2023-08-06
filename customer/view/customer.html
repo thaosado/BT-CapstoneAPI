@@ -36,63 +36,57 @@
       </div>
     </div>
   </header>
+  <!-- END HEADER -->
   <section class="carousel">
     <div class="container d-flex">
       <div class="title">
         <h1>Sản phẩm mới</h1>
         <h3>Iphone X</h3>
         <p>Thiết kế mang tính đột phá</p>
-        <button>Add</button>
-        <button>More Info</button>
+        <button class="btn-Add">Add</button>
+        <button class="btn-Moreinfo">More Info</button>
       </div>
       <div class="banner">
         <img src="/asset/image/iphone-x-64gb-hh-600x600.jpg" alt="">
       </div>
-
     </div>
   </section>
+  <!-- PRODUCTS -->
   <section class="products_bg">
     <section class="products">
       <div class="container">
         <div class="title">
           <h1>Tất cả sản phẩm</h1>
         </div>
-        <div class="products row">
-          <div class="product__item col-4">
-            <div class="card">
-              <div class="card__top">
-                <img src="/asset/image/iphone-x-64gb-hh-600x600.jpg" alt="">
-              </div>
-              <div class="card__body">
-                <div class="infor">
-                  <h3>Iphone X</h3>
-                  <p>$1000</p>
-                </div>
-                <button>Mua</button>
-              </div>
-            </div>
-          </div>
-          <div class="product__item col-4">
-            <div class="card">
-              <div class="card__top">
-                <img src="/asset/image/iphone-x-64gb-hh-600x600.jpg" alt="">
-              </div>
-              <div class="card__body">
-                <div class="infor">
-                  <h3>Iphone X</h3>
-                  <p>$1000</p>
-                </div>
-                <button>Mua</button>
-              </div>
-            </div>
-          </div>
-
+        <div id="shopProducts" class="products row">
         </div>
       </div>
     </section>
   </section>
+  <!-- END PRODUCTS -->
+
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Thông tin sản phẩm</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="infor"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Optional JavaScript -->
+  
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -103,6 +97,16 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+  <!-- AXIOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+    integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- MY JS -->
+    <script src="/admin/services/productAPI.js"></script>
+    <script src="/admin/model/Product.js"></script>
+    <script src="/customer/controller/mainshop.js"></script>
 
 </body>
 

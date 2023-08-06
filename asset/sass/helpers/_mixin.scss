@@ -3,3 +3,7 @@
     font-weight: $fw;
     color: $color;
 }
+@mixin button($bg, $color){
+    background-color: $bg;
+    color: $color;
+}

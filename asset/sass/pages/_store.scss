@@ -27,15 +27,20 @@ header#header_bg {
 }
 .products_bg{
     background-color: $color-black;
+    padding-bottom: 50px;
     .products {
         transition: all .5s;
         .title {
-          margin: 100px 0;
+          h1{
+            margin: 0;
+          }
+          padding-top: 80px;
           text-align: center;
           color: $color-white;
         }
-        margin: 30px;
+        margin: 100px 0;
         .card {
+          margin: 10px 0;
             &:hover{
                 box-shadow: -4px -4px 8px rgba(252, 215, 215, 0.2), 8px 8px 12px rgba(28,28,28,.4);
             }
