@@ -33,6 +33,8 @@ function createProduct(){
     .catch((error)=>{
         console.log(error)
     })
+
+    reset()
 }
 
 function selectProduct(productId){
@@ -82,6 +84,8 @@ function updateProduct(productId){
     .catch((error)=>{
         console.log(error)
     })
+
+    reset()
 }
 
 function deleteProduct(productId){
@@ -114,7 +118,7 @@ function display(products){
             <td>${product.desc}</td>
             <td>${product.type}</td>
             <td>
-                    <button class ="btn btn-outline-secondary" onclick="selectProduct(${product.id})">Xem</button>
+                    <button class ="btn btn-outline-secondary" onclick="selectProduct(${product.id})">Sửa</button></button>
                     <button class ="btn btn-dark" onclick="deleteProduct(${product.id})">Xóa</button>    
                 </td>
           </tr>
