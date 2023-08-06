@@ -29,12 +29,13 @@ function createProduct(){
     .then((respone)=>{
         display(respone.data);
         $("#myModal").modal("hide");
+        reset()
     })
     .catch((error)=>{
         console.log(error)
     })
 
-    reset()
+    
 }
 
 function selectProduct(productId){
@@ -63,15 +64,19 @@ function selectProduct(productId){
 }
 
 function updateProduct(productId){
-    let newProduct = {
-        name: DOM("#TenSP").value,
-        price: +DOM("#GiaSP").value,
-        screen: DOM("#screen").value,
-        frontCamera: DOM("#frontCamera").value,
-        backCamera: DOM("#backCamera").value,
-        img: DOM("#imgSP").value,
-        desc: DOM("#descSP").value,
-        type: DOM("#loaiSP").value,
+    // let newProduct = {
+    //     name: DOM("#TenSP").value,
+    //     price: +DOM("#GiaSP").value,
+    //     screen: DOM("#screen").value,
+    //     frontCamera: DOM("#frontCamera").value,
+    //     backCamera: DOM("#backCamera").value,
+    //     img: DOM("#imgSP").value,
+    //     desc: DOM("#descSP").value,
+    //     type: DOM("#loaiSP").value,
+    // }
+    let newProduct = validation()
+    if(!newProduct){
+        return
     }
     apiUpdateProduct(productId, newProduct)
     .then(()=>{
