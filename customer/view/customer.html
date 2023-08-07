@@ -32,7 +32,10 @@
         <div class="div">
           <a id="store" href="../../index.html"><i class="fa-solid fa-house"></i> HOME</a>
         </div>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" class="cart" onclick="clickCart()">
+          <span><i class="fa-solid fa-cart-shopping"></i></span>
+          <span class="count" id="count">0</span>
+        </a>
       </div>
     </div>
   </header>
@@ -43,11 +46,11 @@
         <h1>Sản phẩm mới</h1>
         <h3>Iphone X</h3>
         <p>Thiết kế mang tính đột phá</p>
-        <button class="btn-Add">Add</button>
+        <button class="btn-Add" onclick="cart('1')">Add</button>
         <button class="btn-Moreinfo">More Info</button>
       </div>
       <div class="banner">
-        <img src="/asset/image/iphone-x-64gb-hh-600x600.jpg" alt="">
+        <img src="/asset/image/apple-iphone-x-64-gb-uzaygri-3.png" alt="">
       </div>
     </div>
   </section>
@@ -69,7 +72,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Thông tin sản phẩm</h5>
+          <h5 class="modal-title text-dark">Thông tin sản phẩm</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -79,14 +82,32 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+          <button type="button" class="btn btn-dark">Thêm vào giỏ</button>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- CART -->
+  <div class="formCart form-group d-none" id="formCart">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Sản phẩm</th>
+          <th scope="col" style="text-align: center;">Số lượng</th>
+          <th scope="col" style="text-align: center;">Giá</th>
+          <th></th>
+        </tr>
+        <tbody id="displayCart">
+
+        </tbody>
+      </thead>
+    </table>
+    <p style="text-align: right;" class="mr-5" id="sumPrice">Tổng giá: </p>
+  </div>
+
   <!-- Optional JavaScript -->
-  
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -104,9 +125,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- MY JS -->
-    <script src="/admin/services/productAPI.js"></script>
-    <script src="/admin/model/Product.js"></script>
-    <script src="/customer/controller/mainshop.js"></script>
+  <script src="/admin/services/productAPI.js"></script>
+  <script src="/admin/model/Product.js"></script>
+  <script src="/customer/controller/mainshop.js"></script>
 
 </body>
 

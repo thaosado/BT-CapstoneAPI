@@ -64,16 +64,6 @@ function selectProduct(productId){
 }
 
 function updateProduct(productId){
-    // let newProduct = {
-    //     name: DOM("#TenSP").value,
-    //     price: +DOM("#GiaSP").value,
-    //     screen: DOM("#screen").value,
-    //     frontCamera: DOM("#frontCamera").value,
-    //     backCamera: DOM("#backCamera").value,
-    //     img: DOM("#imgSP").value,
-    //     desc: DOM("#descSP").value,
-    //     type: DOM("#loaiSP").value,
-    // }
     let newProduct = validation()
     if(!newProduct){
         return

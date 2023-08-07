@@ -126,6 +126,41 @@ header#header_bg a#store {
   align-items: center;
 }
 
+.cart {
+  margin: 0;
+  position: relative;
+}
+.cart .count {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -12px;
+  left: 50%;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+.formCart {
+  position: absolute;
+  background-color: #F2F3F4;
+  top: 70px;
+  right: 0;
+  width: 450px;
+  height: auto;
+}
+.formCart img {
+  width: 50px;
+  height: auto;
+}
+.formCart i {
+  cursor: pointer;
+}
+
 .products_bg {
   background-color: black;
   padding-bottom: 50px;

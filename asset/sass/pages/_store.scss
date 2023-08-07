@@ -25,6 +25,42 @@ header#header_bg {
     align-items: center;
   }
 }
+
+.cart{
+  margin: 0;
+  position: relative;
+  .count{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -12px;
+    left: 50%;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+  }
+}
+
+.formCart{
+  position: absolute;
+  background-color: $color-grey1;
+  top: 70px;
+  right: 0;
+  width: 450px;
+  height: auto;
+  img{
+    width: 50px;
+    height: auto;
+  }
+  i{
+    cursor: pointer;
+  }
+}
+
 .products_bg{
     background-color: $color-black;
     padding-bottom: 50px;
@@ -71,5 +107,6 @@ header#header_bg {
         }
       }
 }
+
 
 
