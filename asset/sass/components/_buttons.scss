@@ -14,3 +14,10 @@
     @include button($color-grey4, $color-white);
     border: none;
 }
+
+button:focus{
+    outline: 0;
+}
+button:active{
+    outline: 1px solid;
+}

@@ -66,14 +66,23 @@ function showInfor(productId) {
         Camera trước: ${product.frontCamera}<br>
         Miêu tả: ${product.desc}<br>
         Loại: ${product.type}
-
-
         `
+      DOM("#modal-footer").innerHTML = 
+      `
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-dark" onclick="cart2(${product.id})">Thêm vào giỏ</button>
+      `
     })
     .catch((error) => {
       console.log(error);
     })
 
+}
+
+function cart2(productId){
+  cart(productId);
+  $('#myModal').modal('hide');
+  
 }
 
 
@@ -192,6 +201,8 @@ function calcSumPrice(){
   DOM("#sumPrice").innerHTML = `Tổng giá: $${sumPrice}`
 }
 
-
 calcSumPrice()
-console.log(sumPrice);
+function closeCart(){
+  DOM("#formCart").classList.add("d-none");
+
+}

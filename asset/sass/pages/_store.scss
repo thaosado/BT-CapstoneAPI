@@ -6,7 +6,7 @@ header#header_bg {
   }
 }
 .carousel {
-  margin: 30px 0;
+  margin-bottom: 30px;
   background-position: center;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -26,6 +26,13 @@ header#header_bg {
   }
 }
 
+.cart:hover{
+  .count{
+    background-color: #909397;
+    color: white;
+  }
+}
+
 .cart{
   margin: 0;
   position: relative;
@@ -42,6 +49,7 @@ header#header_bg {
     justify-content: center;
     align-items: center;
     color: red;
+
   }
 }
 
@@ -61,10 +69,9 @@ header#header_bg {
   }
 }
 
-.products_bg{
-    background-color: $color-black;
+.products {
+      background-color: $color-black;
     padding-bottom: 50px;
-    .products {
         transition: all .5s;
         .title {
           h1{
@@ -106,7 +113,37 @@ header#header_bg {
             }
         }
       }
+
+.formCart{
+  animation: fadeInRight;
+  animation-duration: 1s;
 }
 
 
+
+.cd-top{
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  bottom: 0;
+  width: 90px;
+  height: 50px;
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  margin: 0;
+  border-radius: 10px;
+
+  &--is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  &--fade-out {
+    opacity: .5;
+  }
+}
 
