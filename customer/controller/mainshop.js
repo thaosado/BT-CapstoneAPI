@@ -96,6 +96,7 @@ function cart(productId) {
           showCart();
           saveLocal();
           calcSumPrice()
+          $('#myModal').modal('hide');
           return
         }
       }
@@ -208,11 +209,11 @@ function closeCart(){
 
 function pay(){
   cartShop.map((value) =>{
-    return value.quality = 0;
+    return value.quality = 1;
   })
   count = 0;
-
-  localStorage.removeItem("cartShop");
+  cartShop = [];
+  saveLocal();
 
   DOM("#count").innerHTML = 0;
   DOM("#formCart").classList.add("d-none");

@@ -17,6 +17,7 @@
     }
 }
 #btnAddProduct{
+    transition: all .5s;
     background-color: $color-black;
     border-color: $color-black;
     margin: 10px 0;
