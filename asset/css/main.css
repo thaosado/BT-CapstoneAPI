@@ -57,8 +57,11 @@ button:active {
   font-size: 25px;
 }
 
+.product {
+  padding-top: 150px;
+}
 .product h1 {
-  margin: 50px 0;
+  margin-bottom: 50px;
   font-size: 28px;
   font-weight: 500;
   color: #2b3c4e;
@@ -80,6 +83,15 @@ button:active {
   background-color: black;
   border-color: black;
   margin: 10px 0;
+}
+#btnAddProduct:focus {
+  box-shadow: none;
+}
+#btnAddProduct:active {
+  box-shadow: 0 0 0 0.2rem rgba(15, 16, 15, 0.5);
+}
+#btnAddProduct:hover {
+  background-color: #626567;
 }
 
 header#header_bg {

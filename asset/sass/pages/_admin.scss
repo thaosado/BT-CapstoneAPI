@@ -1,6 +1,7 @@
 .product{
+    padding-top: 150px;
     h1{
-        margin: 50px 0;
+        margin-bottom: 50px;
         @include styleText($fs-5, $fw-5, $color-blue6)
     }
 }
@@ -19,4 +20,13 @@
     background-color: $color-black;
     border-color: $color-black;
     margin: 10px 0;
+    &:focus{
+       box-shadow: none;
+    }
+    &:active{
+        box-shadow: 0 0 0 0.2rem rgb(15 16 15 / 50%) ;
+    }
+    &:hover{
+        background-color: $color-grey6;
+    }
 }

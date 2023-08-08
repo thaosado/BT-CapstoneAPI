@@ -2,8 +2,8 @@
     // Back to Top - by CodyHouse.co
 	var backTop = document.getElementsByClassName('js-cd-top')[0],
 		offset = 300, // browser window scroll (in pixels) after which the "back to top" link is shown
-		offsetOpacity = 1000, //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-		scrollDuration = 700,
+		offsetOpacity = 900, //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+		scrollDuration = 900,
 		scrolling = false;
 
 	if( backTop ) {

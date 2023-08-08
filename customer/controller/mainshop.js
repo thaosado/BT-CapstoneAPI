@@ -70,19 +70,13 @@ function showInfor(productId) {
       DOM("#modal-footer").innerHTML = 
       `
       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-dark" onclick="cart2(${product.id})">Thêm vào giỏ</button>
+          <button type="button" class="btn btn-dark" onclick="cart(${product.id})">Thêm vào giỏ</button>
       `
     })
     .catch((error) => {
       console.log(error);
     })
 
-}
-
-function cart2(productId){
-  cart(productId);
-  $('#myModal').modal('hide');
-  
 }
 
 
@@ -109,6 +103,7 @@ function cart(productId) {
       saveLocal()
       showCart()
       calcSumPrice()
+      $('#myModal').modal('hide');
     })
     .catch((error) => {
       console.log(error);
@@ -186,10 +181,14 @@ function downQuality(productId){
     if(cartShop[i].id === `${productId}`){
         cartShop[i].quality --;
         count--;
+        if(cartShop[i].quality < 1){
+          deleteCartItem(productId)
+          return
+        }
         saveLocal()
         showCart()
     }
-    ("#count").innerHTML = count;
+    DOM("#count").innerHTML = count;
     calcSumPrice()
   }
 }
@@ -203,6 +202,19 @@ function calcSumPrice(){
 
 calcSumPrice()
 function closeCart(){
+  DOM("#formCart").classList.add("d-none");
+
+}
+
+function pay(){
+  cartShop.map((value) =>{
+    return value.quality = 0;
+  })
+  count = 0;
+
+  localStorage.removeItem("cartShop");
+
+  DOM("#count").innerHTML = 0;
   DOM("#formCart").classList.add("d-none");
 
 }

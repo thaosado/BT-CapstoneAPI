@@ -15,9 +15,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+
   <!-- ADIMATE -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- MY CSS -->
   <link rel="stylesheet" href="/asset/css/main.css">
@@ -31,7 +33,7 @@
   <header id="header_bg">
     <div class="container">
       <div class="navbar d-flex justify-content-between">
-        <a id="logo" href="#">Cybersoft Phone</a>
+        <a id="logo" href="/index.html">Cybersoft Phone</a>
         <a href="#" class="cart" onclick="clickCart()">
           <span><i class="fa-solid fa-cart-shopping"></i></span>
           <span class="count" id="count">0</span>
@@ -39,26 +41,26 @@
       </div>
     </div>
     <!-- CART -->
-  <div class="formCart form-group d-none animate__animated animate__fadeInRight" id="formCart">
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Sản phẩm</th>
-          <th scope="col" style="text-align: center;">Số lượng</th>
-          <th scope="col" style="text-align: center;">Giá</th>
-          <th></th>
-        </tr>
+    <div class="formCart form-group d-none animate__animated animate__fadeInRight" id="formCart">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Sản phẩm</th>
+            <th scope="col" style="text-align: center;">Số lượng</th>
+            <th scope="col" style="text-align: center;">Giá</th>
+            <th></th>
+          </tr>
         <tbody id="displayCart">
 
         </tbody>
-      </thead>
-    </table>
-    <p style="text-align: right;" class="mr-5" id="sumPrice">Tổng giá: </p>
-    <div style="text-align: right;" class="my-4 mr-4">
-      <button class="btn btn-dark">Thank toán</button>
-      <button type="button" class="btn btn-secondary" onclick="closeCart()">Đóng</button>
+        </thead>
+      </table>
+      <p style="text-align: right;" class="mr-5" id="sumPrice">Tổng giá: </p>
+      <div style="text-align: right;" class="my-4 mr-4">
+        <button onclick="pay()" class="btn btn-dark">Thank toán</button>
+        <button type="button" class="btn btn-secondary" onclick="closeCart()">Đóng</button>
+      </div>
     </div>
-  </div>
   </header>
   <!-- END HEADER -->
   <section class="carousel">
@@ -77,13 +79,13 @@
   </section>
   <!-- PRODUCTS -->
   <section class="products">
-      <div class="container">
-        <div class="title">
-          <h1>Tất cả sản phẩm</h1>
-        </div>
-        <div id="shopProducts" class="products row">
-        </div>
+    <div class="container">
+      <div class="title">
+        <h1>Tất cả sản phẩm</h1>
       </div>
+      <div id="shopProducts" class="products row">
+      </div>
+    </div>
   </section>
   <!-- END PRODUCTS -->
 
@@ -100,19 +102,19 @@
           <p id="infor"></p>
         </div>
         <div class="modal-footer" id="modal-footer">
-          
+
         </div>
       </div>
     </div>
   </div>
 
-  
 
-  <a href="#" class="cd-top text-replace js-cd-top" ><i class="fa-solid fa-house"></i>HOME</a>
-  
-  <script src="/asset/back-to-top-master/assets/js/util.js"></script> 
-<script src="/asset/back-to-top-master/assets/js/main.js"></script>
-  
+  <!-- BACK TO TOP -->
+  <a href="#" class="cd-top text-replace js-cd-top"><i class="fa-solid fa-house"></i>HOME</a>
+
+  <script src="/asset/back-to-top-master/assets/js/util.js"></script>
+  <script src="/asset/back-to-top-master/assets/js/main.js"></script>
+
   <!-- Optional JavaScript -->
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -127,7 +129,7 @@
     crossorigin="anonymous"></script>
 
 
-    
+
   <!-- AXIOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
     integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="

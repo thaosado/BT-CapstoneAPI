@@ -24,10 +24,9 @@
   <!-- HEADER -->
   <header>
     <div class="container">
-      <div class="navbar d-flex justify-content-start">
+      <div class="navbar d-flex justify-content-between">
         <a id="logo" href="/index.html">Cyber Phone</a>
         <div class="div ml-5">
-          <a href="./admin.html"><i class="fa-solid fa-house"></i> HOME</a>
           <a href="/customer/view/customer.html"><i class="fa-solid fa-store"></i> STORE</a>
         </div>
       </div>
@@ -35,7 +34,7 @@
   </header>
   <section class="product">
     <div class="container">
-      <h1>Quản lý sản phẩm</h1>
+      <h1 style="text-align: center; font-weight: 600;">QUẢN LÝ SẢN PHẨM</h1>
       <div class="navSortSearch d-flex justify-content-between">
         <div class="sort">
           <div class="form-group">
@@ -55,7 +54,8 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
-      <button class="btn btn-success" id="btnAddProduct" data-toggle="modal" data-target="#myModal" onclick="reset()">Thêm Mới</button>
+      <button class="btn btn-success" id="btnAddProduct" data-toggle="modal" data-target="#myModal"
+        onclick="reset()">Thêm Mới</button>
       <table class="table">
         <thead class="thead-light">
           <tr>
@@ -72,7 +72,7 @@
           </tr>
         </thead>
         <tbody id="productsList">
-          
+
         </tbody>
       </table>
     </div>
@@ -134,12 +134,18 @@
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button class ="btn btn-secondary" data-dismiss = "modal" onclick="reset()">Hủy</button>
-        <button class ="btn btn-success" onclick = "createProduct()">Thêm</button>
+          <button class="btn btn-secondary" data-dismiss="modal" onclick="reset()">Hủy</button>
+          <button class="btn btn-success" onclick="createProduct()">Thêm</button>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- BACK TO TOP -->
+  <a href="#" class="cd-top text-replace js-cd-top"><i class="fa-solid fa-house"></i>HOME</a>
+
+  <script src="/asset/back-to-top-master/assets/js/util.js"></script>
+  <script src="/asset/back-to-top-master/assets/js/main.js"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

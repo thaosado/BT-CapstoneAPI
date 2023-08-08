@@ -113,8 +113,8 @@ function display(products){
             <td>${product.desc}</td>
             <td>${product.type}</td>
             <td>
-                    <button class ="btn btn-outline-secondary" onclick="selectProduct(${product.id})">Sửa</button></button>
-                    <button class ="btn btn-dark" onclick="deleteProduct(${product.id})">Xóa</button>    
+                    <button style ="width: 55px" class ="btn btn-outline-secondary mb-2" onclick="selectProduct(${product.id})">Sửa</button></button>
+                    <button style ="width: 55px" class ="btn btn-dark" onclick="deleteProduct(${product.id})">Xóa</button>    
                 </td>
           </tr>
         `)
@@ -203,6 +203,8 @@ function validation(){
     if(!isRequired(name)){
         isValid = false;
         DOM("#spanName").innerHTML = "Tên sản phẩm không được để trống";
+    }else{
+        DOM("#spanName").innerHTML = "";
     }
     if(!isRequired(price)){
         isValid = false;
@@ -210,30 +212,44 @@ function validation(){
     }else if(!isPrice(price)){
         isValid = false;
         DOM("#spanPrice").innerHTML = "Giá sản phẩm phải là số";
+    }else{
+        DOM("#spanPrice").innerHTML = "";
     }
     if(!isRequired(screen)){
         isValid = false;
         DOM("#spanScreen").innerHTML = "Màn hình sản phẩm không được để trống";
+    }else{
+        DOM("#spanScreen").innerHTML = "";
     }
     if(!isRequired(frontCamera)){
         isValid = false;
         DOM("#spanFrontCam").innerHTML = "Camera trước của sản phẩm không được để trống";
+    }else{
+        DOM("#spanFrontCam").innerHTML = "";
     }
     if(!isRequired(backCamera)){
         isValid = false;
         DOM("#spanBackCam").innerHTML = "Camera sau của sản phẩm không được để trống";
+    }else{
+        DOM("#spanBackCam").innerHTML = "";
     }
     if(!isRequired(img)){
         isValid = false;
         DOM("#spanImg").innerHTML = "Ảnh sản phẩm không được để trống";
+    }else{
+        DOM("#spanImg").innerHTML = "";
     }
     if(!isRequired(desc)){
         isValid = false;
         DOM("#spanDesc").innerHTML = "Miêu tả sản phẩm không được để trống";
+    }else{
+        DOM("#spanDesc").innerHTML = "";
     }
     if(!isRequired(type)){
         isValid = false;
         DOM("#spanType").innerHTML = "Loại sản phẩm không được để trống";
+    }else{
+        DOM("#spanType").innerHTML = "";
     }
     if(isValid){
         let product = {
@@ -284,3 +300,4 @@ function reset(){
     DOM("#spanDesc").innerHTML = "";
     DOM("#spanType").innerHTML = "";
 }
+
