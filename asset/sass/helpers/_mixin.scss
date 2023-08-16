@@ -7,3 +7,15 @@
     background-color: $bg;
     color: $color;
 }
+
+@mixin responsive($screen){
+    @if(map-has-key($map: $breakpoints, $key: $screen )){
+        $width: map-get($map: $breakpoints, $key: $screen );
+
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    } @else {
+        @warn "invalid screen"
+    }
+}

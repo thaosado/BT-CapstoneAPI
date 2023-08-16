@@ -66,7 +66,7 @@ function display(products) {
       return (
          result +
          `
-        <div class="product__item col-4">
+        <div class="product__item col-l-4 mr-3 ">
             <div class="card">
               <div class="card__top">
                 <img src="${product.img}" alt="">

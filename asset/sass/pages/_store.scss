@@ -32,6 +32,14 @@
    margin: 70px 0 0;
    transition: all 0.5s;
 
+   .row{
+      @include responsive(small){
+         justify-content: center;
+      }
+      @include responsive(extra-large){
+         justify-content: flex-start;
+      }
+   }
    .title {
       h1 {
          margin: 0;

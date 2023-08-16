@@ -9,3 +9,11 @@ $fw-1: 300;
 $fw-2: 400;
 $fw-5: 500;
 $fw-6: 600;
+
+$breakpoints: (
+    'small': 576px,
+    'medium': 768px,
+    'large': 992px,
+    'extra-large': 1200px,
+)
+
