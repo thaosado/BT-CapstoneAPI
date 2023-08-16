@@ -1,33 +1,39 @@
-.product{
-    padding-top: 150px;
-    h1{
-        margin-bottom: 50px;
-        @include styleText($fs-5, $fw-5, $color-blue6)
-    }
+.product {
+   padding-top: 150px;
+
+   h1 {
+      margin-bottom: 50px;
+      @include styleText($fs-5, $fw-5, $color-blue6);
+   }
 }
-.search{
-    position: relative;
-    i{
-        position: absolute;
-        top: 35px;
-        right: 10px;
-    }
-    input{
-        width: 400px;
-    }
+.search {
+   position: relative;
+
+   i {
+      position: absolute;
+      top: 35px;
+      right: 10px;
+   }
+
+   input {
+      width: 400px;
+   }
 }
-#btnAddProduct{
-    transition: all .5s;
-    background-color: $color-black;
-    border-color: $color-black;
-    margin: 10px 0;
-    &:focus{
-       box-shadow: none;
-    }
-    &:active{
-        box-shadow: 0 0 0 0.2rem rgb(15 16 15 / 50%) ;
-    }
-    &:hover{
-        background-color: $color-grey6;
-    }
+#btnAddProduct {
+   transition: all 0.5s;
+   background-color: $color-black;
+   border-color: $color-black;
+   margin: 10px 0;
+
+   &:focus {
+      box-shadow: none;
+   }
+
+   &:active {
+      box-shadow: 0 0 0 0.2rem rgb(15 16 15 / 50%);
+   }
+
+   &:hover {
+      background-color: $color-grey6;
+   }
 }

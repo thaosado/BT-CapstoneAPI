@@ -3,6 +3,7 @@
 @import "./helpers/variables";
 
 @import "./base/reset";
+@import "./base/lib";
 
 @import "./components/buttons";
 @import "./pages/home";
@@ -10,4 +11,3 @@
 @import "./pages/store";
 
 @import "./layouts/header";
-

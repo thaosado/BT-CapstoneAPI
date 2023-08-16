@@ -1,129 +1,108 @@
-header#header_bg {
-  background-color: $color-black;  
-  a#store {
-    margin: 0;
-    margin-right: 150px;
-  }
+#header_bg {
+   background-color: $color-black;
 }
+
 .carousel {
-  margin-bottom: 30px;
-  background-position: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  .title {
-    margin-left: 200px;
-  }
-  .banner {
-    margin: 0 auto;
-    img {
-      max-width: 100%;
-      height: auto;
-      width: 400px;
-    }
-  }
-  .container {
-    align-items: center;
-  }
-}
+   margin-bottom: 30px;
+   background-position: center;
+   padding-top: 100px;
+   padding-bottom: 50px;
 
-.cart:hover{
-  .count{
-    background-color: #909397;
-    color: white;
-  }
-}
+   .title {
+      margin-left: 200px;
+   }
 
-.cart{
-  margin: 0;
-  position: relative;
-  .count{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: -12px;
-    left: 50%;
-    font-size: 15px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: red;
+   .banner {
+      margin: 0 auto;
+      img {
+         max-width: 100%;
+         height: auto;
+         width: 400px;
+      }
+   }
 
-  }
-}
-
-.formCart{
-  position: absolute;
-  background-color: $color-grey1;
-  top: 70px;
-  right: 0;
-  width: 450px;
-  height: auto;
-  img{
-    width: 50px;
-    height: auto;
-  }
-  i{
-    cursor: pointer;
-  }
+   .container {
+      align-items: center;
+   }
 }
 
 .products {
-      background-color: $color-black;
-    padding-bottom: 50px;
-        transition: all .5s;
-        .title {
-          h1{
-            margin: 0;
-          }
-          padding-top: 80px;
-          text-align: center;
-          color: $color-white;
-        }
-        margin: 100px 0;
-        .card {
-          margin: 10px 0;
-            &:hover{
-                box-shadow: -4px -4px 8px rgba(252, 215, 215, 0.2), 8px 8px 12px rgba(28,28,28,.4);
-            }
-          width: 300px;
-          height: 350px;
-          padding: 15px;
-          border-radius: 15px;
-          background-color:$color-black1;
-        }
-        .card__top {
-          text-align: center;
-          img {
-            max-width: 100%;
-            height: auto;
-            width: 200px;
-          }
-        }
-        .card__body{
-            text-align: center;
-            padding-top: 5px;
-            color: $color-white;
-            button{
-                width: 80px;
-                background-color: $color-black;
-                color: $color-white;
-                border-radius: 10px;
-            }
-        }
+   background-color: $color-black;
+   padding-bottom: 50px;
+   margin: 70px 0 0;
+   transition: all 0.5s;
+
+   .title {
+      h1 {
+         margin: 0;
+      }
+      padding-top: 80px;
+      text-align: center;
+      color: $color-white;
+   }
+
+   .card {
+      margin: 20px 0;
+      width: 300px;
+      height: auto;
+      padding: 30px 10px;
+      border-radius: 9px;
+      background-color: $color-black1;
+      transition: box-shadow 0.7s;
+
+      &:hover {
+         box-shadow: rgba(252, 215, 215, 0.2) 0px 4px 10px 3px;
       }
 
-.formCart{
-  animation: fadeInRight;
-  animation-duration: 1s;
+      h3 {
+         font-size: 20px;
+      }
+   }
+
+   .card__top {
+      text-align: center;
+      img {
+         max-width: 100%;
+         height: auto;
+         width: 80%;
+         border-radius: 9px;
+      }
+   }
+   .card__body {
+      text-align: center;
+      padding-top: 5px;
+      color: $color-white;
+      button {
+         background-color: $color-black;
+         color: $color-white;
+         width: 85px;
+         border-radius: 3px;
+         padding: 3px 0px;
+         outline: 0;
+         border: 1px solid $color-black;
+         margin: 0 3px;
+
+         &#detail {
+            transition: 0.3s all;
+         }
+
+         &#add {
+            transition: 0.3s all;
+         }
+
+         &:hover {
+            &#detail {
+               background-color: #fff;
+               border: 1px solid #fff;
+               color: $color-black;
+            }
+
+            &#add {
+               background-color: aquamarine;
+               border: 1px solid aquamarine;
+               color: $color-black;
+            }
+         }
+      }
+   }
 }
-
-.card{
-  h3{
-    font-size: 20px;
-  }
-}
-
-
-

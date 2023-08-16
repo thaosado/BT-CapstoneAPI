@@ -17,7 +17,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- MY CSS -->
-  <link rel="stylesheet" href="/asset/css/main.css">
+  <link rel="stylesheet" href="../../asset/css/main.css">
 </head>
 
 <body>
@@ -25,9 +25,9 @@
   <header>
     <div class="container">
       <div class="navbar d-flex justify-content-between">
-        <a id="logo" href="/index.html">Cyber Phone</a>
+        <a id="logo" href="../../index.html">Cyber Phone</a>
         <div class="div ml-5">
-          <a href="/customer/view/customer.html"><i class="fa-solid fa-store"></i> STORE</a>
+          <a href="../../customer/view/customer.html"><i class="fa-solid fa-store"></i> STORE</a>
         </div>
       </div>
     </div>
@@ -54,8 +54,7 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
-      <button class="btn btn-success" id="btnAddProduct" data-toggle="modal" data-target="#myModal"
-        onclick="reset()">Thêm Mới</button>
+      <button class="btn btn-success" id="btnAddProduct" data-toggle="modal" data-target="#myModal">Thêm Mới</button>
       <table class="table">
         <thead class="thead-light">
           <tr>
@@ -84,7 +83,7 @@
       <div class="modal-content">
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Thêm sản phẩm mới</h4>
+          <h4 class="modal-title"></h4>
           <button type="button" class="close" data-dismiss="modal">
             &times;
           </button>
@@ -94,48 +93,46 @@
           <div class="form-group">
             <label>Tên Sản Phẩm</label>
             <input id="TenSP" class="form-control" placeholder="Nhập vào tên sản phẩm" />
-            <span id="spanName" class="text-danger"></span>
+            <span id="spanTenSP" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label>Giá</label>
             <input id="GiaSP" class="form-control" placeholder="Nhập vào giá" />
-            <span id="spanPrice" class="text-danger"></span>
+            <span id="spanGiaSP" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label>Màn Hình</label>
-            <input id="screen" class="form-control" placeholder="Nhập vào màn hình sản phẩm" />
+            <input id="Screen" class="form-control" placeholder="Nhập vào màn hình sản phẩm" />
             <span id="spanScreen" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label>Camera Trước</label>
-            <input id="frontCamera" class="form-control" placeholder="Nhập vào camera trước của sản phẩm" />
-            <span id="spanFrontCam" class="text-danger"></span>
+            <input id="FrontCamera" class="form-control" placeholder="Nhập vào camera trước của sản phẩm" />
+            <span id="spanFrontCamera" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label>Camera Sau</label>
-            <input id="backCamera" class="form-control" placeholder="Nhập vào camera sau của sản phẩm" />
-            <span id="spanBackCam" class="text-danger"></span>
+            <input id="BackCamera" class="form-control" placeholder="Nhập vào camera sau của sản phẩm" />
+            <span id="spanBackCamera" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label>Hình Ảnh</label>
-            <input id="imgSP" class="form-control" placeholder="Nhập vào hình sản phẩm" />
-            <span id="spanImg" class="text-danger"></span>
+            <input id="ImgSP" class="form-control" placeholder="Nhập vào hình sản phẩm" />
+            <span id="spanImgSP" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label>Miêu tả</label>
-            <input id="descSP" class="form-control" placeholder="Nhập vào miêu tả sản phẩm" />
-            <span id="spanDesc" class="text-danger"></span>
+            <input id="DescSP" class="form-control" placeholder="Nhập vào miêu tả sản phẩm" />
+            <span id="spanDescSP" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label>Loại sản phẩm: </label>
-            <input id="loaiSP" class="form-control" placeholder="Nhập vào loại sản phẩm" />
-            <span id="spanType" class="text-danger"></span>
+            <input id="LoaiSP" class="form-control" placeholder="Nhập vào loại sản phẩm" />
+            <span id="spanLoaiSP" class="text-danger"></span>
           </div>
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button class="btn btn-secondary" data-dismiss="modal" onclick="reset()">Hủy</button>
-          <button class="btn btn-success" onclick="createProduct()">Thêm</button>
         </div>
       </div>
     </div>
@@ -144,8 +141,8 @@
   <!-- BACK TO TOP -->
   <a href="#" class="cd-top text-replace js-cd-top"><i class="fa-solid fa-house"></i>HOME</a>
 
-  <script src="/asset/back-to-top-master/assets/js/util.js"></script>
-  <script src="/asset/back-to-top-master/assets/js/main.js"></script>
+  <script src="../../asset/js/util.js"></script>
+  <script src="../../asset/js/main.js"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -170,9 +167,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- MY JS -->
-  <script src="/admin/services/productAPI.js"></script>
-  <script src="/admin/model/Product.js"></script>
-  <script src="/admin/controller/main.js"></script>
+  <script src="../services/productAPI.js"></script>
+  <script src="../model/Product.js"></script>
+  <script src="../controller/main.js"></script>
 </body>
 
 </html>

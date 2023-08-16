@@ -1,0 +1,94 @@
+.cd-top {
+   visibility: hidden;
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   right: 35px;
+   bottom: 20px;
+   width: 100px;
+   height: 50px;
+   background-color: black;
+   text-decoration: none;
+   color: white;
+   margin: 0;
+   border-radius: 3px;
+
+   i {
+      margin-right: 7px;
+      font-size: 15px;
+   }
+
+   &:hover {
+      color: $color-black;
+      opacity: 1;
+      background-color: aquamarine;
+   }
+
+   &--is-visible {
+      visibility: visible;
+      opacity: 1;
+   }
+
+   &--fade-out {
+      opacity: 0.5;
+   }
+}
+
+.lds-dual-ring {
+   display: inline-block;
+   width: 80px;
+   height: 80px;
+}
+.lds-dual-ring:after {
+   content: " ";
+   display: block;
+   width: 64px;
+   height: 64px;
+   margin: 8px;
+   border-radius: 50%;
+   border: 6px solid aquamarine;
+   border-color: aquamarine transparent aquamarine transparent;
+   animation: lds-dual-ring 1.2s linear infinite;
+}
+
+#loading {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 100;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #fff;
+   transition: 0.8s all;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 0;
+   }
+
+   70% {
+      opacity: 0.8;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes lds-dual-ring {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}

@@ -1,31 +1,107 @@
-a{
-    text-decoration: none;
-    transition: all .5s;
-    &:hover{
-        text-decoration: none;
-        color: $color-grey4;
-    }
+.container {
+   margin: 0 auto;
+   height: 100%;
+
+   .navbar {
+      height: 100%;
+   }
 }
-.container{
-    margin: 0 auto;
-    height: 100%;
-    .navbar{
-        height: 100%;
-    }
+header {
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 10;
+   align-items: center;
+   height: 70px;
+   background-color: $color-blue6;
+
+   a {
+      @include styleText($fs-3, $fw-2, $color-white);
+      margin-right: 15px;
+
+      &#logo {
+         font-size: $fs-5;
+
+         &:hover {
+            color: aquamarine;
+         }
+      }
+   }
 }
-header{
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    align-items: center;
-    height: 70px;
-    background-color: $color-blue6;
-    a{
-        @include styleText($fs-3, $fw-2, $color-white);
-        margin-right: 15px;
-    }
-    a#logo{
-        font-size: $fs-5;
-    }
-    
+
+.cart {
+   margin: 0;
+   position: relative;
+   @include styleText($fs-3, $fw-2, $color-white);
+   cursor: pointer;
+
+   .count {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: -12px;
+      left: 50%;
+      font-size: 15px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: red;
+      transition: 0.3s all;
+   }
+
+   i {
+      transition: 0.3s all;
+   }
+
+   &:hover {
+      .count {
+         background-color: $color-grey4;
+         color: white;
+      }
+
+      i {
+         color: $color-grey4;
+      }
+   }
+}
+
+#formCart {
+   position: absolute;
+   background-color: $color-grey1;
+   right: 0;
+   width: 450px;
+   height: auto;
+   transform: translateX(100%);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.7s;
+
+   &.show {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+   }
+
+   img {
+      width: 50px;
+      height: auto;
+   }
+
+   i {
+      cursor: pointer;
+   }
+
+   #cartNoti {
+      padding: 50px 0;
+      text-align: center;
+   }
+}
+
+body.modal-open {
+   header {
+      max-width: calc(100% - 17px);
+   }
 }

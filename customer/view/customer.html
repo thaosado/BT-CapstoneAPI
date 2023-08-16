@@ -22,26 +22,26 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- MY CSS -->
-  <link rel="stylesheet" href="/asset/css/main.css">
+  <link rel="stylesheet" href="../../asset/css/main.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
-<body>
+<body id="page">
   <!-- HEADER -->
   <header id="header_bg">
     <div class="container">
       <div class="navbar d-flex justify-content-between">
-        <a id="logo" href="/index.html">Cybersoft Phone</a>
-        <a href="#" class="cart" onclick="clickCart()">
+        <a id="logo" href="../../index.html">Cybersoft Phone</a>
+        <div class="cart" onclick="toggleCart()">
           <span><i class="fa-solid fa-cart-shopping"></i></span>
-          <span class="count" id="count">0</span>
-        </a>
+          <span class="count" id="amount">0</span>
+        </div>
       </div>
     </div>
     <!-- CART -->
-    <div class="formCart form-group d-none animate__animated animate__fadeInRight" id="formCart">
+    <div class="formCart form-group" id="formCart">
       <table class="table">
         <thead class="thead-light">
           <tr>
@@ -55,28 +55,31 @@
         </tbody>
         </thead>
       </table>
-      <p style="text-align: right;" class="mr-5" id="sumPrice">Tổng giá: </p>
+      <div id="cartNoti"></div>
+      <p style="text-align: right;" class="mr-5" id="sumPrice"></p>
       <div style="text-align: right;" class="my-4 mr-4">
-        <button onclick="pay()" class="btn btn-dark">Thank toán</button>
-        <button type="button" class="btn btn-secondary" onclick="closeCart()">Đóng</button>
+        <button onclick="createModalComfirm()" class="btn btn-dark mr-1" id="purchase">Thanh toán</button>
+        <button type="button" class="btn btn-secondary" onclick="toggleCart()">Đóng</button>
       </div>
     </div>
   </header>
   <!-- END HEADER -->
+
   <section class="carousel">
-    <div class="container d-flex">
-      <div class="title">
+    <div class="container d-flex" id="carousel-content">
+      <!-- <div class="title">
         <h1>Sản phẩm mới</h1>
         <h3>Iphone X</h3>
         <p>Thiết kế mang tính đột phá</p>
-        <button class="btn-Add" onclick="cart('1')">Add</button>
+        <button class="btn-Add" onclick="addToCart('1')">Add</button>
         <button onclick="showInfor('1')" class="btn-Moreinfo">More Info</button>
       </div>
       <div class="banner">
         <img src="/asset/image/apple-iphone-x-64-gb-uzaygri-3.png" alt="">
-      </div>
+      </div> -->
     </div>
   </section>
+
   <!-- PRODUCTS -->
   <section class="products">
     <div class="container">
@@ -108,12 +111,16 @@
     </div>
   </div>
 
+  <!-- LOADING -->
+  <div id="loading">
+    <div class="lds-dual-ring"></div>
+  </div>
 
   <!-- BACK TO TOP -->
   <a href="#" class="cd-top text-replace js-cd-top"><i class="fa-solid fa-house"></i>HOME</a>
 
-  <script src="/asset/back-to-top-master/assets/js/util.js"></script>
-  <script src="/asset/back-to-top-master/assets/js/main.js"></script>
+  <script src="../../asset/js/util.js"></script>
+  <script src="../../asset/js/main.js"></script>
 
   <!-- Optional JavaScript -->
 
@@ -136,9 +143,9 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- MY JS -->
-  <script src="/admin/services/productAPI.js"></script>
-  <script src="/admin/model/Product.js"></script>
-  <script src="/customer/controller/mainshop.js"></script>
+  <script src="../../admin/services/productAPI.js"></script>
+  <script src="../../admin/model/Product.js"></script>
+  <script src="../controller/mainshop.js"></script>
 
 </body>
 

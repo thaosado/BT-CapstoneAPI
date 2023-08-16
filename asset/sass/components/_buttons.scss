@@ -1,61 +1,67 @@
-.btn-shop{
-    padding: 8px 35px;
-    font-size: 18px;
-    transition: all .5s;
+.btn-shop {
+   padding: 8px 35px;
+   font-size: 18px;
+   transition: all 0.5s;
 }
 
-.btn-Add{
-    @extend .btn-shop;
-    @include button($color-white, $color-black);
-    border: solid 1px $color-grey4;
-    &:hover{
-        background-color: black;
-        color: white;
-        border: solid 1px black;
-    }
+.btn-Add {
+   @extend .btn-shop;
+   @include button($color-white, $color-black);
+   border: solid 1px $color-grey4;
+   &:hover {
+      background-color: black;
+      color: white;
+      border: solid 1px black;
+   }
 }
 
-.btn-Moreinfo{
-    @extend .btn-shop;
-    @include button($color-grey4, $color-white);
-    border: solid 1px $color-grey4;
+.btn-Moreinfo {
+   @extend .btn-shop;
+   @include button($color-grey4, $color-white);
+   border: solid 1px $color-grey4;
 
-    &:hover{
-        background-color: black;
-        color: white;
-    }
+   &:hover {
+      background-color: black;
+      color: white;
+   }
 }
 
-button:focus{
-    outline: 0;
-}
-button:active{
-    outline: 1px solid;
+button:focus {
+   &:focus {
+      outline: 0;
+   }
+
+   &:active {
+      outline: 1px solid;
+   }
 }
 
+button.btnConfirm {
+   padding: 6px 12px;
+   font-size: 16px;
+   border-radius: 4px;
+   background: $color-grey4;
+   border: 1px solid $color-grey4;
+   color: $color-white;
+   margin-right: 10px;
+   transition: 0.5s all;
 
-.cd-top{
-    visibility: hidden;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 20px;
-    bottom: 0;
-    width: 90px;
-    height: 50px;
-    background-color: black;
-    text-decoration: none;
-    color: white;
-    margin: 0;
-    border-radius: 10px;
-  
-    &--is-visible {
-      visibility: visible;
-      opacity: 1;
-    }
-    
-    &--fade-out {
-      opacity: .5;
-    }
-  }
+   &:hover {
+      background: aquamarine;
+      border-color: aquamarine;
+   }
+}
+
+button.btnClose {
+   padding: 6px 12px;
+   font-size: 16px;
+   border-radius: 4px;
+   background: $color-grey4;
+   border: 1px solid $color-grey4;
+   color: $color-white;
+   transition: 0.5s all;
+
+   &:hover {
+      opacity: 0.7;
+   }
+}
