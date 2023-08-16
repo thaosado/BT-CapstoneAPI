@@ -183,7 +183,7 @@ DOM("#inputSort").onchange = debounce((event) => {
       sortFromMin();
    }
    if (event.target.value === "fromMax") {
-      //   sortFromMax();
+        sortFromMax();
    }
    if (event.target.value === "") {
       apiGetProducts()
@@ -194,7 +194,7 @@ DOM("#inputSort").onchange = debounce((event) => {
             console.log(error);
          });
    }
-   console.log(event.target.value);
+   
 }, 1500);
 
 // RESET FORM
